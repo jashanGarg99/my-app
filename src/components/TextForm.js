@@ -51,7 +51,7 @@ export default function TextForm(props) {
   return (
     <>
     <div style={formStyle} >
-      <h2>{props.title}</h2>
+      <h2 className='text-center' >{props.title}</h2>
       <div className="mb-3">
       <label htmlFor="exampleFormControlTextarea1" className="form-label">Text Here</label>
       <textarea className="form-control" style={textAreaStyle}  value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" rows="9"></textarea>
@@ -70,7 +70,9 @@ export default function TextForm(props) {
                     Total Words
                 </div>
                 <div className="col">
-                    <b>{text.trim()=== "" ? 0 : text.trim().split(" ").length}</b>
+                {/* let newText=text.split(/[ ]+/);
+                setText(newText.join(" ")); */}
+                    <b>{text.trim()=== "" ? 0 : text.trim().split(/\s+/).length}</b>
                 </div>
             </div>
         </div>
@@ -80,7 +82,7 @@ export default function TextForm(props) {
                     Total chracters
                 </div>
                 <div className="col">
-                    <b>{text.trim().split(/[ ]+/).join("").length}</b>
+                    <b>{text.trim().split(/\s+/).join("").length}</b>
                 </div>
             </div>
         </div>
@@ -90,7 +92,7 @@ export default function TextForm(props) {
                     Reading Time
                 </div>
                 <div className="col">
-                    <b>{Math.ceil(text.trim().split(/[ ]+/).join("").length*0.1)} sec</b>
+                    <b>{Math.ceil(text.trim().split(/\s+/).join("").length*0.1)} sec</b>
                 </div>
             </div>
         </div>
@@ -100,7 +102,7 @@ export default function TextForm(props) {
                     Speaking Time
                 </div>
                 <div className="col">
-                    <b>{Math.ceil(text.trim().split(/[ ]+/).join("").length*0.2)} sec</b>
+                    <b>{Math.ceil(text.trim().split(/\s+/).join("").length*0.2)} sec</b>
                 </div>
             </div>
         </div>
@@ -111,7 +113,7 @@ export default function TextForm(props) {
         </h2>
     </div>
     <div className="container" style={style1} >
-            <p>{text.trim().split(/[ ]+/).join("").length>0? <b>{text}</b> : <b>Enter some text in upper box to preview it here</b> }</p>
+            <p>{text.trim().split(/\s+/).join("").length>0? <b>{text}</b> : <b>Enter some text in upper box to preview it here</b> }</p>
     </div>
     </>
   )

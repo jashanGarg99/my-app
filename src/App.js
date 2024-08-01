@@ -34,9 +34,9 @@ function App() {
   return (
     <>
     <Navbar mode={mode} toggeleMode={toggeleMode}/>
-    <Alerts alert={alert} />
+    <div className=""style={{height :'45px'}}><Alerts alert={alert} /></div>
     <div className="container my-3">
-    <TextForm title="Text Analyzer" mode={mode} showAlert={showAlert}  />
+    <TextForm title="Text Analyzer By Jashan Garg" mode={mode} showAlert={showAlert}  />
     {/* <About/> */}
     </div>
     </>
