@@ -70,8 +70,6 @@ export default function TextForm(props) {
                     Total Words
                 </div>
                 <div className="col">
-                {/* let newText=text.split(/[ ]+/);
-                setText(newText.join(" ")); */}
                     <b>{text.trim()=== "" ? 0 : text.trim().split(/\s+/).length}</b>
                 </div>
             </div>

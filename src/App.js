@@ -37,7 +37,6 @@ function App() {
     <div className=""style={{height :'45px'}}><Alerts alert={alert} /></div>
     <div className="container my-3">
     <TextForm title="Text Analyzer By Jashan Garg" mode={mode} showAlert={showAlert}  />
-    {/* <About/> */}
     </div>
     </>
   );
